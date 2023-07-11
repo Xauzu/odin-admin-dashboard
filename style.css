@@ -1,6 +1,8 @@
 :root {
     --color-bg: rgba(255, 255, 255, 1);
     --color-bg-object: rgba(221, 241, 248, 0.6);
+    --color-secondary: rgb(70, 155, 235);
+    --color-secondary-text: rgb(255, 255, 255);
 }
 
 * {
@@ -18,7 +20,7 @@ html, body, .container, .sub-container {
 
 .container, .sub-container,
 .sidebar, .header, .content,
-.search, .user, .greeting,
+.search, .user, .greeting, .actionbar,
 .project-section, .announcement-section, .trending-section,
 .projects, .news {
     display: grid;
@@ -41,12 +43,12 @@ img {
 }
 
 .sub-container {
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: auto 4fr;
 }
 
 .header {
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
 }
 
 .content {
@@ -62,17 +64,67 @@ img {
 }
 
 /* header */
-.search {
+.search, .user, .greeting, .actionbar {
     gap: 4px;
+    padding: 0.7rem;
+    align-items: center;
+}
+
+.search {
     grid-template-columns: auto 1fr;
-    padding: 1rem;
 }
 
 input {
-    max-height: 1.5rem;
+    height: 1.5rem;
     margin-right: 4rem;
     background-color: var(--color-bg-object);
     border-radius: 8px;
+}
+
+.user {
+    grid-template-columns: repeat(2, auto) 1fr;
+    justify-content: space-around;
+    padding-left: 4rem;
+    gap: 16px;
+}
+
+.userimg {
+    max-width: 2rem;
+    max-height: 2rem;
+    border-radius: 16px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.greeting {
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+}
+
+.big-userimg {
+    max-width: 4rem;
+    max-height: 4rem;
+    border-radius: 32px;
+    padding: 0 1.5rem;
+}
+
+.usertag {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.actionbar {
+    grid-template-columns: repeat(3, auto);
+    place-content: space-around;
+}
+
+button[class^="button-action-"]{
+    padding: 0.5rem 1rem;
+    background-color: var(--color-secondary);
+    color: var(--color-secondary-text);
+    border-radius: 16px;
 }
 
 /* projects */
