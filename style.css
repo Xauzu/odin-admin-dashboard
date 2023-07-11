@@ -31,6 +31,29 @@ img {
     max-height: 1.5rem;
 }
 
+/* sidebar */
+
+.menu > *, .sidebar-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    filter: invert(1);
+    padding: 0.7rem 1.3rem;
+    gap: 8px;
+    align-items: center;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.menu > * > img, .sidebar-header > img {
+    max-width: 2.5rem;
+    max-height: 2.5rem;
+}
+
+.sidebar-header {
+    font-size: xx-large;
+}
+
+
 /* container */
 
 .container {
