@@ -188,6 +188,12 @@ button[class^="button-action-"]{
     font-weight: bolder;
 }
 
+.card-act {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: right;
+}
+
 .card-act > img {
     max-width: 3rem;
     max-height: 3rem;
