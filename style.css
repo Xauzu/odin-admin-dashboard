@@ -40,10 +40,12 @@ img {
 .sidebar {
     grid-row: span 2;
     grid-template-rows: 1fr 15fr;
+    background-color: var(--color-secondary);
 }
 
 .sub-container {
     grid-template-rows: auto 4fr;
+    background-color: var(--color-bg-object);
 }
 
 .header {
