@@ -80,10 +80,12 @@ img {
 .content {
     grid-template-columns: 3fr 1fr;
     background-color: var(--color-bg-object);
+    padding: 16px;
 }
 
 .projects {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 16px;
 }
 
 .news {
@@ -154,8 +156,41 @@ button[class^="button-action-"]{
     border-radius: 16px;
 }
 
+/* content header*/
+
+.project-header, .announcement-header, .trending-header {
+    font-weight: bolder;
+    align-self: center;
+    font-size: large;
+}
+
 /* projects */
 
 .project-section {
     grid-template-rows: 1fr 15fr;
 }
+
+.card {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    background-color: var(--color-bg);
+    border-radius: 16px;
+    padding: 8px;
+    box-shadow: -5px 0px 0px 0px var(--color-secondary);
+}
+
+.card-title, .card-desc {
+    font-size: large;
+    padding: 4px;
+}
+
+.card-title {
+    font-weight: bolder;
+}
+
+.card-act > img {
+    max-width: 3rem;
+    max-height: 3rem;
+}
+
+/* News */
