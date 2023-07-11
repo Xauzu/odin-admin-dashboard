@@ -14,7 +14,7 @@ html, body, .container {
 .container,
 .sidebar, .header, .content,
 .project-section, .announcement-section, .trending-section,
-.news {
+.projects, .news {
     display: grid;
 }
 
@@ -32,6 +32,16 @@ html, body, .container {
     grid-template-columns: 3fr 1fr;
 }
 
+.projects {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
 .news {
     grid-template-rows: 1fr 1fr;
+}
+
+/* projects */
+
+.project-section {
+    grid-template-rows: 1fr 15fr;
 }
