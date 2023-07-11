@@ -3,6 +3,7 @@
     --color-bg-object: rgba(221, 241, 248, 0.6);
     --color-secondary: rgb(70, 155, 235);
     --color-secondary-text: rgb(255, 255, 255);
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 * {
