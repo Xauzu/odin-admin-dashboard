@@ -11,7 +11,7 @@ html, body, .container {
 
 /* css grid */
 
-.container,
+.container, .sub-container,
 .sidebar, .header, .content,
 .project-section, .announcement-section, .trending-section,
 .projects, .news {
@@ -21,11 +21,16 @@ html, body, .container {
 /* container */
 
 .container {
-    grid-template: 1fr 4fr / 1fr 3fr;
+    grid-template-columns: 1fr 3fr;
+}
+
+.sub-container {
+    grid-template-rows: 1fr 4fr;
 }
 
 .sidebar {
     grid-row: span 2;
+    grid-template-rows: 1fr 15fr;
 }
 
 .content {
